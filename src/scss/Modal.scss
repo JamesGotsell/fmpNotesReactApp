@@ -1,0 +1,79 @@
+.create-note-modal {
+    background-color: whitesmoke;
+    height: 100%;
+    & div.model-title {
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    
+    & .title-input {
+        width:100%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-align: center;
+        background-color: floralwhite;
+
+        & .title {
+            display: block;
+            font-size: 20px;    
+        }
+        
+    }
+    & .body-input {
+        
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-align: center;
+        background-color: floralwhite;
+
+        & .body-title {
+            display: block;
+            font-size: 20px;    
+        }
+        
+    }
+    & form.create-note-form {
+        margin: auto;
+        width:350px !important;
+        height: 400px;
+        // background-color: black;
+        & label {
+            color: black;
+            margin-bottom: 10px;
+        }
+        & input[type='text'] {
+            width:100px;
+            display: inline-block;
+
+            
+        }
+        & textarea  {
+            width: 300px;
+            height: 250px ;
+        }
+        
+    }
+    & .submit-new-note {
+        
+        background: #3498db;
+        color: white;
+        padding: 10px 20px 10px 20px;
+        text-decoration: none;
+        width:100%;
+    }
+    & .submit-new-note:hover {
+        background: #3cb0fd;
+        text-decoration: none;
+      }
+    & .close-new-note {
+        margin-top:10px;
+        margin-left: 10px;
+        background: #3498db;
+        color: white;
+        padding: 10px 20px 10px 20px;
+        text-decoration: none;
+        width:20%;
+        
+    }
+}

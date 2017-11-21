@@ -31,12 +31,9 @@ class NoteContainer extends React.Component {
     if(inputTitle && inputBody !==""){
       this.props.dispatch(actions.createNote({title:inputTitle, text:inputBody}))
     }
-   
     this.closeModal()
   }
-  componentDidMount() {
-      // this.props.dispatch(actions.showNotes(notes))
-  }
+ 
 
   componentWillReceiveProps(nextProps) {
     // i know the correct props are getting passed
@@ -54,18 +51,27 @@ class NoteContainer extends React.Component {
                             onAfterOpen={this.afterOpenModal}
                             onRequestClose={this.closeModal}
                             dispatch={dispatch}
+
                             contentLabel="Create Note "
                           >
-                            <button onClick={this.closeModal}>close</button>
-                              <div>New Note </div>
-                                  <form onSubmit={this.handleSubmit}>
-                                    <p> i need to dispatch createNote action with the title and test</p>
-                                    <label>title</label>
+                          <div className="create-note-modal">
+                          <button className="close-new-note" onClick={this.closeModal}>close</button>
+                              <div className="model-title" >New Note </div>
+                                  <form className="create-note-form" onSubmit={this.handleSubmit}>
+                
+                                    <div className="title-input">
+                                        <label className="title">Title</label>
                                         <input type="text" ref="inputTitle"/>
-                                    <label>Note Body</label>
-                                        <textarea type='text' ref="inputBody"/>     
-                                    <input type="submit" value="Submit"/>
+                                    </div>
+                                    <div className="body-input">
+                                       <label className="body-title">Note Body</label>
+                                        <textarea type='text' ref="inputBody"/>  
+                                    </div>
+                                      
+                                    <input className="submit-new-note" type="submit" value="Submit"/>
                               </form>
+                          </div>
+                            
                           </Modal>
             </div>
             <NotesList notes={notes} 

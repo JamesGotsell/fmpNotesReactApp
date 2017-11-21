@@ -23,27 +23,36 @@ class NoteListItem extends React.Component {
  
     render() {
   
-      const { dispatch,  text, title } = this.props
+      const { text, title } = this.props
 
       return (
   
-        <div>  
+        <div className="note-item-container">  
                 <Modal
                       isOpen={this.state.isModalOpen}
                       onRequestClose={this.props.closeModal}
                       
                       contentLabel="View Note "
                 >
-                  <button onClick={this.closeModal}>close</button>
-                            <div> View Note </div>
-                            <p>{this.props.title}</p>
-                            <p>{this.props.text}</p>
-                             
+                <div className="view-note">
+                  <button className="view-note-close" onClick={this.closeModal}>close</button>
+                            <div className="view-note-data-container"> 
+                                  <h2>Note</h2>
+                                    <p>{title}</p>
+                                  <p>{text}</p>
+                            
+                           </div>
+                            
+                </div>          
               </Modal>
           <div className="notes"> 
                
-                <p>{this.props.title}</p> -  <p>{this.props.id}</p>
-                 <button onClick={() => {this.openModel()} } >View Note</button>
+               <div>
+                    <p>{this.props.title}</p> -  <p>{this.props.id}</p>
+                      <br/>
+                      <button class="view-note" onClick={() => {this.openModel()} } >View Note</button>
+               </div>
+              
           </div>
         </div>
       )

@@ -5,7 +5,7 @@
    
   .App-header {
     background-color: #222;
-    height: 150px;
+    height: 100px;
     padding: 20px;
     color: white;
   }
@@ -15,7 +15,12 @@
   }
   
   .App-intro {
-    font-size: large;
-    font-style: to-upper-case($string: "sss");
-    background: teal;
+    font-size: 30px;
+    margin-top: 0px;
+    height: 65px;
+    margin-bottom: 0px;
+    background: whitesmoke;
+    & p {
+      vertical-align: middle;
+    }
   }
