@@ -1,0 +1,7 @@
+.note-container {
+    background: blanchedalmond;
+    height: 80vh;
+    & .new-note-button-modal {
+        display: flex
+    }
+}
