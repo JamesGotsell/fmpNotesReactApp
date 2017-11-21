@@ -1,3 +1,3 @@
 # fmpTechTest 
 
-  - js logic done i need to get the stlying done 
+  - npm install or yarn install and go to localhost:3000
